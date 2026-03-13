@@ -1,0 +1,384 @@
+.main {
+  min-height: 100vh;
+  padding: 2rem 1rem 4rem;
+}
+
+.container {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  margin-top: 0.4rem;
+  font-size: 1rem;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.sectionTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  width: 100%;
+  padding: 0.65rem 0.9rem;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: var(--text);
+  background: #f8fafc;
+  transition: border-color 0.2s;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #fff;
+}
+
+.textarea {
+  width: 100%;
+  padding: 0.65rem 0.9rem;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: var(--text);
+  background: #f8fafc;
+  resize: vertical;
+  transition: border-color 0.2s;
+}
+
+.textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #fff;
+}
+
+.errorMsg {
+  color: var(--danger);
+  font-size: 0.85rem;
+  margin-top: -0.25rem;
+}
+
+.btnPrimary {
+  background: var(--primary);
+  color: #fff;
+  padding: 0.65rem 1.4rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: background 0.2s, transform 0.1s;
+  align-self: flex-start;
+}
+
+.btnPrimary:hover:not(:disabled) {
+  background: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+.btnPrimary:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.btnSecondary {
+  background: var(--border);
+  color: var(--text);
+  padding: 0.65rem 1.2rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.btnSecondary:hover:not(:disabled) {
+  background: #cbd5e1;
+}
+
+.btnSecondary:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.stats {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.stat {
+  background: var(--card-bg);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  box-shadow: var(--shadow);
+  flex: 1;
+  text-align: center;
+}
+
+.statNum {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--primary);
+  display: block;
+}
+
+.filterBar {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 0.35rem;
+  box-shadow: var(--shadow);
+}
+
+.filterBtn {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  border-radius: 7px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: transparent;
+  transition: background 0.2s, color 0.2s;
+}
+
+.filterBtn:hover {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.filterBtnActive {
+  background: var(--primary) !important;
+  color: #fff !important;
+}
+
+.errorBanner {
+  background: #fee2e2;
+  color: var(--danger);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.dismissBtn {
+  background: none;
+  border: none;
+  color: var(--danger);
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0 0.25rem;
+}
+
+.loadingWrap {
+  text-align: center;
+  padding: 3rem 0;
+  color: var(--text-muted);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.spinner {
+  width: 36px;
+  height: 36px;
+  border: 4px solid var(--border);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.emptyState {
+  text-align: center;
+  padding: 3rem 0;
+  color: var(--text-muted);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.emptyIcon {
+  font-size: 2.5rem;
+}
+
+.todoList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.todoItem {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: opacity 0.2s;
+  border-left: 4px solid var(--primary);
+}
+
+.todoCompleted {
+  border-left-color: var(--success);
+  opacity: 0.75;
+}
+
+.todoContent {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  padding: 1rem 1.1rem;
+}
+
+.checkbox {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #fff;
+  flex-shrink: 0;
+  margin-top: 2px;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.checkbox:hover {
+  border-color: var(--primary);
+}
+
+.checkboxChecked {
+  background: var(--success);
+  border-color: var(--success);
+}
+
+.todoText {
+  flex: 1;
+  min-width: 0;
+}
+
+.todoTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  word-break: break-word;
+}
+
+.todoCompleted .todoTitle {
+  text-decoration: line-through;
+  color: var(--text-muted);
+}
+
+.todoDescription {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+  word-break: break-word;
+}
+
+.todoDate {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  margin-top: 0.35rem;
+}
+
+.todoActions {
+  display: flex;
+  gap: 0.3rem;
+  flex-shrink: 0;
+}
+
+.btnEdit,
+.btnDelete {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  padding: 0.3rem 0.4rem;
+  border-radius: 6px;
+  transition: background 0.15s;
+  line-height: 1;
+}
+
+.btnEdit:hover {
+  background: #e0e7ff;
+}
+
+.btnDelete:hover {
+  background: #fee2e2;
+}
+
+.editForm {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 1rem 1.1rem;
+}
+
+.editActions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .stats {
+    gap: 0.5rem;
+  }
+
+  .stat {
+    padding: 0.4rem 0.6rem;
+  }
+}
